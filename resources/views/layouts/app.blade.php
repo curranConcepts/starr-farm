@@ -97,7 +97,7 @@
                     </div>
                     <div class="eleven columns flex -flex-align-baseline -space-between -padding-horizontal">
                         <div class="">
-                            <h1>Kristie's Farm Index</h1>
+                            <h1>Starr Farms</h1>
                         </div>
                         <div class="flex -justify-end">
                             <a class="button -light-bg -rounded -margin-5" href="/flock">Flock</a>
