@@ -1,0 +1,113 @@
+// Custom Styles
+.card-icon {
+    width: 50px;
+}
+.card:hover {
+    transition-duration: 0.5s;
+    .-shadow-large
+}
+.navigation {
+    height: 105px;
+    padding-top: 5px;
+    border-bottom: 1px solid @night-100;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    .-light-bg;
+}
+.sideBar {
+    height:100vh;
+    border-right: 1px solid @primary;
+}
+.footer {
+    padding: 10px 0;
+    min-width: 100vw;
+    .-light-bg;
+}
+body {
+    background-color: @primary;
+}
+.pageWrapper {
+    background-color: #ffffff;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+
+/*
+ * Flock Styles
+ */
+
+.chicken-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-basis: 200px;
+    margin: 1em .5em;
+
+    .card {
+        width: 30%;
+    }
+    .chicken-image {
+        width: 100%;
+        height: 300px;
+    }
+}
+
+
+
+
+
+
+.accordion {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+}
+
+.accordion-button {
+    width: 100%;
+    cursor: pointer;
+    display: inline-block;
+    padding: 8px 8px 10px 8px;
+    border: 1px solid #7d70ba;
+    color: #7d70ba;
+    transition: 0.2s linear all;
+}
+
+
+.accordion-content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    border-top: 1px solid #ccc;
+}
+
+form {
+    padding: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
