@@ -13,7 +13,7 @@
                 <h2>{{ $chicken->name }}</h2>
                 <p>
                 <strong>Breed:</strong> {{ $chicken->breed }}<br>
-                <strong>Birthday:</strong>  {{ $chicken->birthday }}<br>
+                <strong>Birthday:</strong>  {{ \Carbon\Carbon::parse($chicken->birthday)->format('Y-m-d') }}<br>
                 <strong>Age:</strong>  {{ $chicken->age }}<br>
                 <strong>Bio:</strong>  {{ $chicken->bio }}<br>
                 </p>
