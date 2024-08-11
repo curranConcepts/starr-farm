@@ -11,7 +11,7 @@
         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
         <meta name="msapplication-TileColor" content="#da532c">
         <meta name="theme-color" content="#ffffff">
-        <title>Starr Farms</title>
+        <title>Starr Farm</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -100,7 +100,7 @@
                     </div>
                     <div class="eleven columns flex -flex-align-baseline -space-between -padding-horizontal">
                         <div class="">
-                            <h1>Starr Farms</h1>
+                            <h1>Starr Farm</h1>
                         </div>
                         <div class="flex -justify-end">
                             <a class="button -light-bg -rounded -margin-5" href="/flock">Flock</a>
