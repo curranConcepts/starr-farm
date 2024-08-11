@@ -28,9 +28,11 @@
                     @if (Route::has('login'))
                         <div class="-padding-right" style="float:right;display:flex;">
                             @auth
-                                <a href="{{ route('profile.edit') }}" style="padding:0 5px;">Dashboard</a>
+                                <a href="{{ route('profile.edit') }}" class="-padding-5">Dashboard</a>
+                                <span class="-padding-5">|</span>
+
                         <!-- Authentication -->
-                        <form method="POST" action="{{ route('logout') }}" style="padding:0 5px;">
+                        <form method="POST" action="{{ route('logout') }}" class="-padding-5">
                             @csrf
 
                             <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
@@ -39,10 +41,11 @@
                         </form>
 
                             @else
-                                <a href="{{ route('login') }}" class="">Log in</a>
+                                <a href="{{ route('login') }}" class="-padding-5">Log in</a>
+                                <span class="-padding-5">|</span>
 
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="">Register</a>
+                                    <a href="{{ route('register') }}" class="-padding-5">Register</a>
                                 @endif
                             @endauth
                         </div>
@@ -55,7 +58,7 @@
                     <div class="one column logo -centering">
                         <a href="/" class="">
                             <svg fill="#f55247" height="85px" width="85px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 470 470" xml:space="preserve" style="margin-top:-25px;">
+                                viewBox="0 0 470 470" xml:space="preserve" style="margin-top:-35px;">
                                 <g>
                                 <path d="M439.433,250.015C439.795,245.041,440,240.037,440,235c0-10.413-0.793-20.88-2.357-31.111
                                 c-0.561-3.664-3.711-6.366-7.414-6.366c-13.518,0.066-26.925,0.729-40.229,1.953v-23.999c0.818,0.29,1.661,0.432,2.494,0.432
