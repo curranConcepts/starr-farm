@@ -8,7 +8,6 @@
     @endif
     <div class="row">
         <div class="twelve columns">
-            @auth
             <div class="accordion" style="margin-top: 20px;">
                 <button class="accordion-button button -white-bg -rounded">Add a Member to the Flock</button>
                 <div class="accordion-content">
@@ -74,7 +73,6 @@
                     </div>
                 </div>
             </div>
-        @endauth
             <h1>Flock</h1>
             @livewire('chickens')
         </div>
