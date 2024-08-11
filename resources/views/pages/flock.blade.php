@@ -16,10 +16,6 @@
                         <form action="/flock" method="POST" enctype="multipart/form-data">
                             @csrf
                             <div class="form-group">
-                                <label for="image">Upload Image</label>
-                                <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror">
-                            </div>
-                            <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" name="name" id="name" class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" required>
                                 @error('name')
@@ -57,6 +53,11 @@
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
+                            </div>
+
+                            <div class="form-group">
+                                <label for="image">Photo</label>
+                                <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror">
                             </div>
 
                             <div class="form-group">
