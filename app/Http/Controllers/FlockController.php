@@ -19,7 +19,6 @@ class FlockController extends Controller
     public function addFlock(Request $request)
     {
         $this->validate($request, [
-            'age' 		          => 'required',
             'birthday' 		      => 'required',
             'breed' 			  => 'required',
             'image'               => 'nullable|image|mimes:jpeg,jpg|max:2048',
@@ -32,7 +31,6 @@ class FlockController extends Controller
         if(!isset($chicken)){
           $chicken = new Chicken;
         }
-        $chicken->age = $request->input('age');
         $chicken->bio = $request->input('bio');
         $chicken->birthday = $request->input('birthday');
         $chicken->breed = $request->input('breed');

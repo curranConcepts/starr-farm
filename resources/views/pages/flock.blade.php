@@ -46,16 +46,6 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="age">Age</label>
-                                <input type="number" name="age" id="age" class="form-control @error('age') is-invalid @enderror" value="{{ old('age') }}" required>
-                                @error('age')
-                                <span class="invalid-feedback" role="alert">
-                                    <strong>{{ $message }}</strong>
-                                </span>
-                            @enderror
-                            </div>
-
-                            <div class="form-group">
                                 <label for="image">Photo</label>
                                 <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror">
                             </div>

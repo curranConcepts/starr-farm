@@ -17,7 +17,6 @@ class Chicken extends Model
         'name',
         'birthday',
         'breed',
-        'age',
         'bio',
         'slug',
         'image',
