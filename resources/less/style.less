@@ -6,6 +6,32 @@
     transition-duration: 0.5s;
     .-shadow-large
 }
+.admin-buttons {
+    display: flex !important;
+    justify-content: flex-end;
+}
+.delete-button {
+    border: none;
+    padding: 0 5px;
+    margin: 0 5px;
+
+    .-tomato-bg !important;
+
+    &:hover {
+        .-tomato-700-bg !important;
+    }
+}
+.edit-button {
+    border: none;
+    padding: 0 5px;
+    margin: 0 5px;
+
+    .-clover-bg !important;
+
+    &:hover {
+        .-clover-700-bg !important;
+    }
+}
 .navigation {
     height: 105px;
     padding-top: 5px;
@@ -18,6 +44,8 @@
     border-right: 1px solid @primary;
 }
 .footer {
+    position: absolute;
+    bottom: -40px;
     padding: 10px 0;
     min-width: 100vw;
     .-light-bg;
@@ -29,6 +57,7 @@ body {
     background-color: #ffffff;
     margin: 0 auto;
     max-width: 1200px;
+    min-height:100vh;
 }
 
 

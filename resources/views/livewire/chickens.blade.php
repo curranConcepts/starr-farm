@@ -16,6 +16,12 @@
                 <strong>Birthday:</strong>  {{ \Carbon\Carbon::parse($chicken->birthday)->format('Y-m-d') }}<br>
                 <strong>Bio:</strong>  {{ $chicken->bio }}<br>
                 </p>
+                @auth
+                    <div class="admin-buttons">
+                        <a href="/flock/edit/{{ $chicken->id }}" class="button edit-button -rounded" style="border:none;"><i class="fa-regular fa-pen-to-square" style="color:#fff;"></i></a>
+                        <a href="/flock/delete/{{ $chicken->id }}" class="button delete-button -rounded" style="border:none;"><i class="fa-regular fa-trash-can" style="color:#fff;"></i></a>
+                    </div>
+                @endauth
             </div>
         </div>
     @endforeach

@@ -49,6 +49,22 @@ class FlockController extends Controller
         return redirect()->back()->with('success', 'Member successfully added to the flock!');
     }
 
+    public function deleteBird($id)
+    {
+        $chicken = Chicken::find($id);
+
+        if ($chicken) {
+            $chicken->delete();
+        }
+
+        return redirect()->back()->with('success', 'Bird has successfully been deleted');
+    }
+
+    /*public function editBird(id $id)*/
+    /*{*/
+    /**/
+    /*}*/
+
     public function peepShow()
     {
         return view('templates.chicken');

@@ -11550,6 +11550,28 @@ pre.wp-block-verse {
   transition-duration: 0.5s;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 }
+.admin-buttons {
+  display: flex !important;
+  justify-content: flex-end;
+}
+.delete-button {
+  border: none;
+  padding: 0 5px;
+  margin: 0 5px;
+  background: #f3554c !important;
+}
+.delete-button:hover {
+  background: #ab3c36 !important;
+}
+.edit-button {
+  border: none;
+  padding: 0 5px;
+  margin: 0 5px;
+  background: #2a9d8f !important;
+}
+.edit-button:hover {
+  background: #1e6e65 !important;
+}
 .navigation {
   height: 105px;
   padding-top: 5px;
@@ -11562,6 +11584,8 @@ pre.wp-block-verse {
   border-right: 1px solid #7d70ba;
 }
 .footer {
+  position: absolute;
+  bottom: -40px;
   padding: 10px 0;
   min-width: 100vw;
   background: #f3f3f3;
@@ -11573,6 +11597,7 @@ body {
   background-color: #ffffff;
   margin: 0 auto;
   max-width: 1200px;
+  min-height: 100vh;
 }
 /*
  * Flock Styles

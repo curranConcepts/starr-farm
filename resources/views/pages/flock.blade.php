@@ -7,7 +7,7 @@
         </div>
     @endif
     <div class="row">
-        <div class="twelve columns">
+        <div class="twelve columns -margin-bottom -padding-bottom">
             @auth
             <div class="accordion" style="margin-top: 20px;">
                 <button class="accordion-button button -white-bg -rounded">Add a Member to the Flock</button>

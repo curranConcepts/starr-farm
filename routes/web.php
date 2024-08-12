@@ -32,9 +32,13 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+// Flock Routes
 Route::get('/flock', [FlockController::class, 'index']);
 Route::post('/flock', [FlockController::class, 'addFlock']);
-Route::get('/chicken/{slug}', [FlockController::class, 'peepShow']);
+Route::get('/flock/edit/{id}', [FlockController::class, 'editBird']);
+Route::get('/flock/delete/{id}', [FlockController::class, 'deleteBird']);
+//Route::get('/chicken/{slug}', [FlockController::class, 'peepShow']);
 
+// Other Routes
 Route::get('/{slug}', [PageController::class, 'page']);
 
