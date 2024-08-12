@@ -29,7 +29,7 @@
                     @if (Route::has('login'))
                         <div class="-padding-right" style="float:right;display:flex;">
                             @auth
-                                <a href="{{ route('profile.edit') }}" class="-padding-5">Dashboard</a>
+                                <a href="{{ route('profile.edit') }}" class="-padding-5">Profile</a>
                                 <span class="-padding-5">|</span>
 
                         <!-- Authentication -->
