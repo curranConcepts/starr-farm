@@ -11579,6 +11579,17 @@ pre.wp-block-verse {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
   background: #f3f3f3;
 }
+.hero {
+  margin: -70px auto 0 auto;
+  height: 300px;
+}
+#logo {
+  margin-top: -35px;
+}
+.logo2 {
+  width: 25%;
+  margin-top: -20px;
+}
 .sideBar {
   height: 100vh;
   border-right: 1px solid #7d70ba;
@@ -11665,6 +11676,32 @@ form button:hover {
 }
 /* Mobile Styles */
 /* Breakpoints in file */
+@media screen and (max-width: 450px) {
+  .hero {
+    scale: 60%;
+    margin: -60px auto;
+  }
+  .navBar {
+    position: absolute;
+    top: 50px;
+  }
+  #logo {
+    display: none;
+  }
+  .logo2 {
+    width: 25%;
+    position: absolute;
+    top: 2%;
+    left: 5%;
+  }
+  .card.-rounded {
+    margin: 20px 0;
+    width: 100%;
+  }
+  .card-icon {
+    display: none;
+  }
+}
 /* Uncomment to enable Dark Mode styles
 @media (prefers-color-scheme: dark) {
 	@import "plugins/dark";

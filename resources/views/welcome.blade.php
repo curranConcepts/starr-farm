@@ -4,7 +4,7 @@
     <div>
         <div class="row">
             <div class="twelve columns -centering">
-                <img src="/images/wheat_chick.png" alt="chick wearing cowboy hat" style="height: 300px;margin: -70px auto 0 auto;">
+                <img src="/images/wheat_chick.png" alt="chick wearing cowboy hat" class="hero">
             </div>
         </div>
                 <div class="row">

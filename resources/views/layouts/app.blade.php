@@ -57,9 +57,9 @@
             <div class="row full-row -padding-top-5 -light-bg">
                 <div>
                     <div class="one column logo -centering">
-                        <a href="/" class="">
+                        <a href="/" id="logo">
                             <svg fill="#f55247" height="85px" width="85px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                                viewBox="0 0 470 470" xml:space="preserve" style="margin-top:-35px;">
+                                viewBox="0 0 470 470" xml:space="preserve">
                                 <g>
                                 <path d="M439.433,250.015C439.795,245.041,440,240.037,440,235c0-10.413-0.793-20.88-2.357-31.111
                                 c-0.561-3.664-3.711-6.366-7.414-6.366c-13.518,0.066-26.925,0.729-40.229,1.953v-23.999c0.818,0.29,1.661,0.432,2.494,0.432
@@ -100,10 +100,10 @@
                         </a>
                     </div>
                     <div class="eleven columns flex -flex-align-baseline -space-between -padding-horizontal">
-                        <div class="">
-                            <img src="images/starrfarm.png" alt="logo" style="width: 25%;margin-top:-20px;"/>
+                        <div>
+                            <img src="images/starrfarm.png" alt="logo" class="logo2"/>
                         </div>
-                        <div class="flex -justify-end">
+                        <div class="flex -justify-end navBar">
                             <a class="button -light-bg -rounded -margin-5" href="/flock">Flock</a>
                             <a class="button -light-bg -rounded -margin-5" href="/crops">Crops</a>
                             <a class="button -light-bg -rounded -margin-5" href="/ornamentals">Ornamentals</a>
