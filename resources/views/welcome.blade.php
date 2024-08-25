@@ -7,7 +7,7 @@
                 <img src="/images/wheat_chick.png" alt="chick wearing cowboy hat" class="hero">
             </div>
         </div>
-                <div class="row">
+                <div class="row firstRow">
                         <div class="five columns push_one card -rounded -shadow -margin-10">
                         <a href="/flock" class="">
                             <div class="flex">

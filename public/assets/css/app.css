@@ -11677,13 +11677,9 @@ form button:hover {
 /* Mobile Styles */
 /* Breakpoints in file */
 @media screen and (max-width: 450px) {
-  .hero {
-    scale: 60%;
-    margin: -60px auto;
-  }
   .navBar {
     position: absolute;
-    top: 50px;
+    top: 45px;
   }
   .logo {
     display: none;
@@ -11693,6 +11689,14 @@ form button:hover {
     position: absolute;
     top: 3%;
     left: 5%;
+  }
+  .hero {
+    scale: 70%;
+    height: 40%;
+    margin: -40px auto;
+  }
+  .firstRow {
+    margin-top: -20px;
   }
   .card.-rounded {
     margin: 20px 0;
