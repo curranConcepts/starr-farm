@@ -17,7 +17,13 @@
 
                                 <div>
                                 <h2 class="">Flock</h2>
-                                <p>There are currently {{ $totalChickens }} chicken(s) in the flock.</p>
+                                @if ($totalChickens > 1)
+                                    <p>There are currently {{ $totalChickens }} chickens in the flock.</p>
+                                @elseif ($totalChickens == 1)
+                                    <p>There is currently 1 chicken in the flock</p>
+                                @else
+                                    <p>There are no chickens in the flock</p>
+                                @endif
                                 </div>
 
                             </div>
