@@ -53,7 +53,7 @@
                                 <div>
                                 <h2 class="">Ornamentals</h2>
 
-                                <p class="">Coming soon!</p>
+                                <p class="">Coming Soon!</p>
                                 </div>
                             </div>
                         </a>
@@ -69,7 +69,7 @@
                                 <div>
                                 <h2 class="">Friends</h2>
 
-                                <p class="">Coming soon!</p>
+                                <p class="">Coming Soon!</p>
                                 </div>
                             </div>
                         </a>
