@@ -101,7 +101,7 @@
                     </div>
                     <div class="eleven columns flex -flex-align-baseline -space-between -padding-horizontal">
                         <div>
-                            <img src="images/starrfarm.png" alt="logo" class="logo2"/>
+                            <a href="/"><img src="images/starrfarm.png" alt="logo" class="logo2"/></a>
                         </div>
                         <div class="flex -justify-end navBar">
                             <a class="button -light-bg -rounded -margin-5" href="/flock">Flock</a>
