@@ -18,7 +18,6 @@
                                 <div>
                                 <h2 class="">Flock</h2>
                                 <p>
-                                    This is where information about the chickens will live.
                                 </p>
                                 </div>
 
@@ -36,9 +35,7 @@
                                 <div>
                                 <h2 class="">Crops</h2>
 
-                                <p class="">
-                                    This is where information about the crops will live.
-                                </p>
+                                <p class="">Coming Soon!</p>
                                 </div>
                             </div>
                         </a>
@@ -56,9 +53,7 @@
                                 <div>
                                 <h2 class="">Ornamentals</h2>
 
-                                <p class="">
-                                    This is where information about ornamental plants will live.
-                                </p>
+                                <p class="">Coming soon!</p>
                                 </div>
                             </div>
                         </a>
@@ -74,9 +69,7 @@
                                 <div>
                                 <h2 class="">Friends</h2>
 
-                                <p class="">
-                                    This is where information about pets will live.
-                                </p>
+                                <p class="">Coming soon!</p>
                                 </div>
                             </div>
                         </a>
