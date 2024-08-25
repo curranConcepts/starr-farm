@@ -11583,8 +11583,8 @@ pre.wp-block-verse {
   margin: -70px auto 0 auto;
   height: 300px;
 }
-#logo {
-  margin-top: -35px;
+.logo {
+  margin-top: -20px;
 }
 .logo2 {
   width: 25%;
@@ -11685,7 +11685,7 @@ form button:hover {
     position: absolute;
     top: 50px;
   }
-  #logo {
+  .logo {
     display: none;
   }
   .logo2 {

@@ -57,8 +57,8 @@
             <div class="row full-row -padding-top-5 -light-bg">
                 <div>
                     <div class="one column logo -centering">
-                        <a href="/" id="logo">
-                            <svg fill="#f55247" height="85px" width="85px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                        <a href="/">
+                            <svg class="logo" fill="#f55247" height="85px" width="85px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                 viewBox="0 0 470 470" xml:space="preserve">
                                 <g>
                                 <path d="M439.433,250.015C439.795,245.041,440,240.037,440,235c0-10.413-0.793-20.88-2.357-31.111
