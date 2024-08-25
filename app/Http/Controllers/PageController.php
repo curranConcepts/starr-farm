@@ -10,7 +10,9 @@ class PageController extends Controller
 {
     public function index(Request $request)
     {
-        return view('welcome');
+        $totalChickens = Chicken::count();
+
+        return view('welcome', compact('totalChickens'));
     }
 
     public function page($slug, Request $request)

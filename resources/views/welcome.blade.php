@@ -17,8 +17,7 @@
 
                                 <div>
                                 <h2 class="">Flock</h2>
-                                <p>
-                                </p>
+                                <p>There are currently {{ $totalChickens }} chicken(s) in the flock.</p>
                                 </div>
 
                             </div>
