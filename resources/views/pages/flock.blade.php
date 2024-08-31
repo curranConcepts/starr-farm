@@ -6,6 +6,17 @@
             {{ session('success') }}
         </div>
     @endif
+
+    @if($errors->any())
+        <div class="alert alert-danger -tomato-300-bg">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <div class="row">
         <div class="twelve columns -margin-bottom -padding-bottom">
             <h1>Flock</h1>
@@ -23,32 +34,37 @@
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
+                                @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="birthday">Birthday</label>
-                                <input type="date" name="birthday" id="birthday" class="form-control @error('birthday') is-invalid @enderror" value="{{ old('birthday') }}" required>
+                                <input type="date" name="birthday" id="birthday" class="form-control @error('birthday') is-invalid @enderror" value="{{ old('birthday') }}" >
                                 @error('birthday')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
+                                @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="breed">Breed</label>
-                                <input type="text" name="breed" id="breed" class="form-control @error('breed') is-invalid @enderror" value="{{ old('breed') }}" required>
+                                <input type="text" name="breed" id="breed" class="form-control @error('breed') is-invalid @enderror" value="{{ old('breed') }}">
                                 @error('breed')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
+                                @enderror
                             </div>
 
                             <div class="form-group">
                                 <label for="image">Photo</label>
                                 <input type="file" name="image" id="image" class="form-control @error('image') is-invalid @enderror">
+                                @error('image')
+                                <span class="invalid-feedback" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
                             </div>
 
                             <div class="form-group">
@@ -58,7 +74,7 @@
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
-                            @enderror
+                                @enderror
                             </div>
 
                             <button type="submit" class="button -clover-bg" style="color:white;">Add Chicken</button>
@@ -66,8 +82,9 @@
                     </div>
                 </div>
             </div>
-        @endauth
+            @endauth
             @livewire('chickens')
         </div>
     </div>
 @endsection
+
