@@ -35,8 +35,8 @@ require __DIR__.'/auth.php';
 // Flock Routes
 Route::get('/flock', [FlockController::class, 'index']);
 Route::post('/flock', [FlockController::class, 'addFlock']);
-Route::get('/flock/edit/{id}', [FlockController::class, 'editBird']);
-Route::get('/flock/delete/{id}', [FlockController::class, 'deleteBird']);
+Route::put('/flock/{id}/update', [FlockController::class, 'updateBird']);
+Route::get('/flock/{id}/delete', [FlockController::class, 'deleteBird']);
 //Route::get('/chicken/{slug}', [FlockController::class, 'peepShow']);
 
 // Other Routes

@@ -24,7 +24,7 @@ class FlockController extends Controller
             $this->validate($request, [
                 'birthday'           => 'nullable',
                 'breed'              => 'nullable',
-                'image'              => 'nullable|image|mimes:jpeg,jpg,png,heif,heic|max:2048',
+                'image'              => 'nullable|image|max:5120',
                 'name'               => 'required',
             ]);
 
@@ -54,6 +54,32 @@ class FlockController extends Controller
         } catch (Exception $e) {
             Log::error('Error adding chicken to the flock: ' . $e->getMessage());
             return redirect()->back()->withErrors('An error occurred while adding the member to the flock. Please try again.');
+        }
+    }
+
+    public function updateBird(Request $request, $id)
+    {
+        try {
+            $chicken = Chicken::find($id);
+
+            $chicken->name = $request->input('name');
+            $chicken->bio = $request->input('bio');
+            $chicken->birthday = $request->input('birthday');
+            $chicken->breed = $request->input('breed');
+
+            if ($request->hasFile('image')) {
+                $image = $request->file('image');
+                $imageName = $chicken->slug . '.' . $image->getClientOriginalExtension();
+                $image->move(public_path('images/chickens/'), $imageName);
+                $chicken->image = $imageName;
+            }
+
+            $chicken->save();
+
+            return redirect()->back()->with('success', 'Bird has been updated successfully');
+        } catch (Exception $e) {
+            Log::error('Error updating chicken: ' . $e->getMessage());
+            return redirect()->back()->withErrors('An error occurred while updating the bird. Please try again.');
         }
     }
 
