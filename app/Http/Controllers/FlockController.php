@@ -6,6 +6,7 @@ use App\Models\Chicken;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Log;
+use Intervention\Image\Laravel\Facades\Image;
 use Exception;
 
 class FlockController extends Controller
@@ -24,7 +25,7 @@ class FlockController extends Controller
             $this->validate($request, [
                 'birthday'           => 'nullable',
                 'breed'              => 'nullable',
-                'image'              => 'nullable|image|max:5120',
+                'image'              => 'nullable|mimes:jpg,jpeg,png,image/heif,image/heic|max:5120',
                 'name'               => 'required',
             ]);
 
@@ -41,13 +42,20 @@ class FlockController extends Controller
             $chicken->name = $request->input('name');
             $chicken->slug = Str::slug($request->input('name'));
 
-            if ($request->hasFile('image')) {
-                $image = $request->file('image');
-                $imageName = $chicken->slug . '.' . $image->getClientOriginalExtension();
-                $image->move(public_path('images/chickens/'), $imageName);
-                $chicken->image = $imageName;
+            if($request->hasFile('image')){
+                $picture = $request->file('image');
+                $filename = $chicken->slug. '.' . $picture->getClientOriginalExtension();
+                $image = Image::read($picture);
+                $image->save(public_path('images/chickens/' . $filename));
+                $chicken->image = $filename;
             }
-
+            /*if ($request->hasFile('image')) {*/
+            /*    $image = $request->file('image');*/
+            /*    $imageName = $chicken->slug . '.' . $image->getClientOriginalExtension();*/
+            /*    $image->move(public_path('images/chickens/'), $imageName);*/
+            /*    $chicken->image = $imageName;*/
+            /*}*/
+            /**/
             $chicken->save();
 
             return redirect()->back()->with('success', 'Member successfully added to the flock!');
