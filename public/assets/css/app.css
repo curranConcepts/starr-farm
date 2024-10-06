@@ -11762,9 +11762,9 @@ form button:hover {
   background: #ab3c36;
 }
 .cancel-button {
-  width: 100% !important;
+  width: 100%;
   color: black;
-  padding: 10px 20px !important;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -11811,6 +11811,10 @@ form button:hover {
   .edit-button,
   .cancel-button {
     height: 100%;
+  }
+  .cancel-button {
+    width: 100% !important;
+    padding: 10px 20px !important;
   }
   .admin-buttons .five.columns {
     margin-bottom: 0 !important;
