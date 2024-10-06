@@ -19,14 +19,26 @@
                 @auth
                     <div class="row admin-buttons">
                         <div class="five columns">
-                        <button type="button" class="edit-button" onclick="openModal('modal-{{ $chicken->id }}')">Edit</button>
+                            <button type="button" class="edit-button" onclick="openModal('modal-{{ $chicken->id }}')">Edit</button>
                         </div>
                         <div class="five columns">
-                        <form id="updateBird" action="/flock/{{ $chicken->id }}/delete" method="GET" style="display:inline;">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="delete-button -rounded" style="border:none;">Delete</button>
-                        </form>
+                            <button type="button" class="delete-button" onclick="openModal('delete-modal-{{ $chicken->id }}')">Delete</button>
+                        </div>
+                    </div>
+
+                    <!-- Delete Confirmation Modal -->
+                    <div id="delete-modal-{{ $chicken->id }}" class="custom-modal">
+                        <div class="custom-modal-content">
+                            <br>
+                            <h2 class="modal-text">Are you sure you want to delete this chicken?</h2>
+                            <div class="row modal-actions -margin-top">
+                                <button type="button" class="six columns cancel-button" onclick="closeModal('delete-modal-{{ $chicken->id }}')">Cancel</button>
+                                <form id="updateBird" class="six columns" action="/flock/{{ $chicken->id }}/delete" method="GET" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="delete-button -rounded" style="border:none;">Delete</button>
+                                </form>
+                            </div>
                         </div>
                     </div>
 

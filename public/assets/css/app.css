@@ -11761,6 +11761,18 @@ form button:hover {
 .delete-button:hover {
   background: #ab3c36;
 }
+.cancel-button {
+  width: 100% !important;
+  color: black;
+  padding: 10px 20px !important;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #f3f3f3;
+}
+.cancel-button:hover {
+  background: #ababab;
+}
 /* Mobile Styles */
 /* Breakpoints in file */
 @media screen and (max-width: 450px) {
@@ -11796,11 +11808,16 @@ form button:hover {
     padding: 0;
   }
   .delete-button,
-  .edit-button {
+  .edit-button,
+  .cancel-button {
     height: 100%;
   }
   .admin-buttons .five.columns {
     margin-bottom: 0 !important;
+  }
+  h2.modal-text {
+    font-size: 18px;
+    text-align: center;
   }
 }
 /* Uncomment to enable Dark Mode styles
