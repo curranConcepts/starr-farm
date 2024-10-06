@@ -25,7 +25,7 @@ class FlockController extends Controller
             $this->validate($request, [
                 'birthday'           => 'nullable',
                 'breed'              => 'nullable',
-                'image'              => 'nullable|mimes:jpg,jpeg,png|max:24M',
+                'image'              => 'nullable|mimes:jpg,jpeg,png|max:10240',
                 'name'               => 'required',
             ]);
 
@@ -49,13 +49,7 @@ class FlockController extends Controller
                 $image->save(public_path('images/chickens/' . $filename));
                 $chicken->image = $filename;
             }
-            /*if ($request->hasFile('image')) {*/
-            /*    $image = $request->file('image');*/
-            /*    $imageName = $chicken->slug . '.' . $image->getClientOriginalExtension();*/
-            /*    $image->move(public_path('images/chickens/'), $imageName);*/
-            /*    $chicken->image = $imageName;*/
-            /*}*/
-            /**/
+
             $chicken->save();
 
             return redirect()->back()->with('success', 'Member successfully added to the flock!');
