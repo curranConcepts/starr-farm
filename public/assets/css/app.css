@@ -11658,6 +11658,9 @@ form button:hover {
 .admin-buttons {
   display: flex;
   justify-content: space-between;
+  position: absolute;
+  bottom: 15px;
+  left: 0;
 }
 #updateBird {
   padding: 0;
@@ -11723,6 +11726,9 @@ form button:hover {
 }
 .save-button:hover {
   background: #1e6e65;
+}
+.card-content p {
+  margin-bottom: 40px;
 }
 .edit-button {
   width: 100%;
