@@ -12,9 +12,9 @@
             <div class="card-content">
                 <h2>{{ $chicken->name }}</h2>
                 <p>
-                <strong>Breed:</strong> {{ $chicken->breed }}<br>
-                <strong>Birthday:</strong>  {{ \Carbon\Carbon::parse($chicken->birthday)->format('Y-m-d') }}<br>
-                <strong>Bio:</strong>  {{ $chicken->bio }}<br>
+                <strong>Breed:</strong> @if(isset($chicken->breed)){{ $chicken->breed }}@else Unknown @endif<br>
+                <strong>Birthday:</strong>  @if(isset($chicken->birthday)){{ \Carbon\Carbon::parse($chicken->birthday)->format('Y-m-d') }}@else Unknown @endif<br>
+                <strong>Bio:</strong>  @if(isset($chicken->bio)){{ $chicken->bio }}@else Not Available @endif<br>
                 </p>
                 @auth
                     <div class="row admin-buttons">
