@@ -25,7 +25,7 @@ class FlockController extends Controller
             $this->validate($request, [
                 'birthday'           => 'nullable',
                 'breed'              => 'nullable',
-                'image'              => 'nullable|mimes:jpg,jpeg,png,image/heif,image/heic|max:5120',
+                'image'              => 'nullable|mimes:jpg,jpeg,png|max:24M',
                 'name'               => 'required',
             ]);
 

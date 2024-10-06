@@ -11559,7 +11559,10 @@ pre.wp-block-verse {
 }
 .hero {
   margin: -70px auto 0 auto;
-  height: 300px;
+  height: auto;
+  width: 100%;
+  max-width: 300px;
+  object-fit: contain;
 }
 .logo {
   margin-top: -20px;
@@ -11763,7 +11766,7 @@ form button:hover {
   }
   .hero {
     scale: 70%;
-    height: 40%;
+    height: auto;
     margin: -40px auto;
   }
   .firstRow {
