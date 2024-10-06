@@ -16,6 +16,7 @@ class FlockController extends Controller
      */
     public function index(Request $request)
     {
+        // logic to sort birds based on age, breed, name (alphabetic)
         return view('pages.flock');
     }
 

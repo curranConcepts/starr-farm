@@ -11,6 +11,10 @@
     padding-top: 5px;
     border-bottom: 1px solid @night-100;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 2;
+
     .-light-bg;
 }
 .hero {
@@ -122,13 +126,6 @@ form button {
 form button:hover {
     background-color: #45a049;
 }
-.admin-buttons {
-    display:flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 15px;
-    left: 0;
-}
 #updateBird {
     padding: 0;
 }
@@ -205,9 +202,20 @@ form button:hover {
 }
 
 .card-content p {
-    margin-bottom: 40px;
+    margin-bottom: 70px;
+    height: 165px;
+    overflow-y: scroll;
 }
 // Admin buttons
+.admin-buttons {
+    display:flex;
+    justify-content: space-between;
+    position: absolute;
+    padding-top:15px;
+    bottom: 15px;
+    left: 0;
+    border-top: 1px solid @light;
+}
 .edit-button {
     width: 100%;
     color: white;
