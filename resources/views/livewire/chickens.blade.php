@@ -9,74 +9,32 @@
                 background-size: cover;
                 background-position: center;">
             </div>
-            <div class="card-content">
+            <div class="card-content" x-data="{ open: false }">
                 <h2>{{ $chicken->name }}</h2>
                 <p>
                 <strong>Breed:</strong> @if(isset($chicken->breed)){{ $chicken->breed }}@else Unknown @endif<br>
-                <strong>Birthday:</strong>  @if(isset($chicken->birthday)){{ \Carbon\Carbon::parse($chicken->birthday)->format('Y-m-d') }}@else Unknown @endif<br>
-                <strong>Bio:</strong>  @if(isset($chicken->bio)){{ $chicken->bio }}@else Not Available @endif<br>
+                <strong>Birthday:</strong> @if(isset($chicken->birthday)){{ \Carbon\Carbon::parse($chicken->birthday)->format('Y-m-d') }}@else Unknown @endif<br>
+                <strong>Bio:</strong> @if(isset($chicken->bio)){{ $chicken->bio }}@else Not Available @endif<br>
                 </p>
+
                 @auth
-                    <div class="row admin-buttons">
-                        <div class="five columns">
-                            <button type="button" class="edit-button" onclick="openModal('modal-{{ $chicken->id }}')">Edit</button>
-                        </div>
-                        <div class="five columns">
-                            <button type="button" class="delete-button" onclick="openModal('delete-modal-{{ $chicken->id }}')">Delete</button>
-                        </div>
-                    </div>
-
-                    <!-- Delete Confirmation Modal -->
-                    <div id="delete-modal-{{ $chicken->id }}" class="custom-modal">
-                        <div class="custom-modal-content">
-                            <br>
-                            <h2 class="modal-text">Are you sure you want to delete this chicken?</h2>
-                            <div class="row modal-actions -margin-top">
-                                <button type="button" class="six columns cancel-button" onclick="closeModal('delete-modal-{{ $chicken->id }}')">Cancel</button>
-                                <form id="updateBird" class="six columns" action="/flock/{{ $chicken->id }}/delete" method="GET" style="display:inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="delete-button -rounded" style="border:none;">Delete</button>
-                                </form>
+                    <div class="admin-plus">
+                        <button type="button" class="plus-button" @click="open = !open">
+                            <div class="plus-icon" :class="{ 'open': open }">
+                                <span class="vertical"></span>
+                                <span class="horizontal"></span>
                             </div>
-                        </div>
+                        </button>
                     </div>
 
-                    <!-- Custom Modal -->
-                    <div id="modal-{{ $chicken->id }}" class="custom-modal">
-                        <div class="custom-modal-content">
-                            <span class="close-button" onclick="closeModal('modal-{{ $chicken->id }}')">&times;</span>
-                            <h2>Edit Chicken</h2>
-                            <form action="/flock/{{ $chicken->id }}/update" method="POST" enctype="multipart/form-data">
-                                @csrf
-                                @method('PUT')
-                                <div class="form-group">
-                                    <label for="name{{ $chicken->id }}">Name</label>
-                                    <input type="text" name="name" id="name{{ $chicken->id }}" value="{{ $chicken->name }}" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="birthday{{ $chicken->id }}">Birthday</label>
-                                    <input type="date" name="birthday" id="birthday{{ $chicken->id }}" value="{{ $chicken->birthday }}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="breed{{ $chicken->id }}">Breed</label>
-                                    <input type="text" name="breed" id="breed{{ $chicken->id }}" value="{{ $chicken->breed }}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="image{{ $chicken->id }}">Photo</label>
-                                    <input type="file" name="image" id="image{{ $chicken->id }}">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="bio{{ $chicken->id }}">Bio</label>
-                                    <textarea name="bio" id="bio{{ $chicken->id }}">{{ $chicken->bio }}</textarea>
-                                </div>
-
-                                <button type="submit" class="save-button">Save changes</button>
-                            </form>
+                    <div x-show="open" class="">
+                        <div class="row admin-buttons">
+                            <div class="five columns">
+                                <button type="button" class="edit-button" onclick="openModal('modal-{{ $chicken->id }}')">Edit</button>
+                            </div>
+                            <div class="five columns">
+                                <button type="button" class="delete-button" onclick="openModal('delete-modal-{{ $chicken->id }}')">Delete</button>
+                            </div>
                         </div>
                     </div>
                 @endauth

@@ -201,8 +201,7 @@ form button:hover {
     .-clover-700-bg;
 }
 
-.card-content p {
-    margin-bottom: 70px;
+.card-content p { //fix for non logged in users
     height: 165px;
     overflow-y: scroll;
 }
@@ -210,11 +209,7 @@ form button:hover {
 .admin-buttons {
     display:flex;
     justify-content: space-between;
-    position: absolute;
     padding-top:15px;
-    bottom: 15px;
-    left: 0;
-    border-top: 1px solid @light;
 }
 .edit-button {
     width: 100%;
@@ -260,4 +255,53 @@ form button:hover {
     }
 }
 
+.admin-drawer {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-top: 10px;
+    display: none;
+}
+.plus-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
 
+.plus-icon {
+    position: relative;
+    width: 24px;
+    height: 24px;
+}
+
+.plus-icon span {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 3px; /* Thickness of the lines */
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.plus-icon .vertical {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 3px; /* Thickness of the vertical line */
+    transform: translateX(-50%);
+}
+
+.plus-icon .horizontal {
+    top: 50%;
+    left: 0;
+    height: 3px; /* Thickness of the horizontal line */
+    transform: translateY(-50%);
+}
+
+.plus-icon.open .vertical {
+    opacity: 0;
+}
+
+.plus-icon.open .horizontal {
+    transform: translateY(-50%) rotate(0deg);
+}

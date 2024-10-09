@@ -16,9 +16,10 @@
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/0e3980ab7c.js" crossorigin="anonymous"></script>
 
         <!-- Styles & Scripts -->
-        <script src="https://kit.fontawesome.com/0e3980ab7c.js" crossorigin="anonymous"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
         <link rel="stylesheet" href="/assets/css/app.css">
         @livewireStyles
     </head>
@@ -104,10 +105,10 @@
                             <a href="/"><img src="images/starrfarm.png" alt="logo" class="logo2"/></a>
                         </div>
                         <div class="flex -justify-end navBar">
-                            <a class="button -light-bg -rounded -margin-5" href="/flock">Flock</a>
-                            <a class="button -light-bg -rounded -margin-5" href="/crops">Crops</a>
-                            <a class="button -light-bg -rounded -margin-5" href="/ornamentals">Ornamentals</a>
-                            <a class="button -light-bg -rounded -margin-5" href="/friends">Friends</a>
+                            <a class="button -light-bg -minimal -margin-5" href="/flock">Flock</a>
+                            <a class="button -light-bg -minimal -margin-5" href="/crops">Crops</a>
+                            <a class="button -light-bg -minimal -margin-5" href="/ornamentals">Ornamentals</a>
+                            <a class="button -light-bg -minimal -margin-5" href="/friends">Friends</a>
                         </div>
                     </div>
                 </div>
