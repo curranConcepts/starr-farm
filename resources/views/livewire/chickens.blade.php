@@ -3,7 +3,7 @@
         @php
             $imageUrl = $chicken->image ? asset('images/chickens/' . $chicken->image) : asset('images/chickens/default.jpg');
         @endphp
-        <div class="card -rounded -shadow -margin-10">
+        <div class="card -rounded -shadow -margin-10" style="padding-bottom:0;">
             <div class="chicken-image"
                 style="background:url('{{ $imageUrl }}');
                 background-size: cover;
